@@ -1,25 +1,9 @@
-"use client";
+import { Toaster } from "react-hot-toast";
 
-import { useEffect, useState } from "react";
-
-import PreviewModal from "@/components/preview-modal";
-
-const ModalProvider = () => {
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
-  if (!isMounted) {
-    return null;
-  }
-
+const ToastProvider = () => {
   return ( 
-    <>
-      <PreviewModal />
-    </>
-   );
+    <Toaster />
+  );
 }
  
-export default ModalProvider;
+export default ToastProvider;
